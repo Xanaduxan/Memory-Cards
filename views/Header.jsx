@@ -10,7 +10,7 @@ function Header({ user }) {
               <a className="nav-link" href="/profile">Личный кабинет</a>
             </li>
             <li className="navbar-item">
-              <a className="nav-link" href="/">Flashcards</a>
+              <a className="nav-link" href="/topics">Flashcards</a>
             </li>
 
             <li className="navbar-item">
