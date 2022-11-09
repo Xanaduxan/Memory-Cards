@@ -17,6 +17,7 @@ app.use('/', mainRoute);
 app.use('/registration', regRoute);
 app.use('/authentication', authRoute);
 
+
 app.listen(PORT, async () => {
   console.log(`Server started at ${PORT} port`);
   // await sequelize.authenticate();
