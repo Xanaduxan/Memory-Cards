@@ -11,6 +11,9 @@ module.exports = {
       question: {
         type: Sequelize.TEXT,
       },
+      answer: {
+        type: Sequelize.TEXT,
+      },
       topicId: {
         type: Sequelize.INTEGER,
         references: {

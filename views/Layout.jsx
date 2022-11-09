@@ -12,6 +12,7 @@ function Layout({ children, user }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/main.css" />
+        <script defer src='./js/profile.js'></script>
         <title>Memory-Cards</title>
       </head>
       <body>
