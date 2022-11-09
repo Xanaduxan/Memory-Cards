@@ -37,6 +37,12 @@ router.post('/', async (req, res) => {
     });
 
     newUser.save();
+    const cards = await Card.findAll({})
+    // const results = await Result.create({
+    //   userId: newUser.id,
+
+    // });
+    console.log(cards)
 
     req.session.userId = newUser.id;
     res.json({ registration: true });
