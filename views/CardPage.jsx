@@ -1,17 +1,17 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function CardPage({user, cards}) {
+function CardPage({user, endCards}) {
   return (
     <Layout user={user}>
-      {cards.map((card) => (
-        <section className="topicList" key={card.id}>
+      {endCards.map((endCard) => (
+        <section className="topicList" key={endCard.id}>
           <div className="card-body">
            
-            <a href={`/topics/${card.id}`} className="card-text">
+            <a href={`/topics/${endCard.id}`} className="card-text">
               Card:
               {' '}
-              {card.question}
+              {endCard.question}
             </a>
           </div>
         </section>
