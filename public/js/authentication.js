@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
 
-    if (!data.login) {
+    if (!data.name) {
       invalidFeedback.innerHTML = data.message;
       emailValue.value = '';
       passwordValue.value = '';

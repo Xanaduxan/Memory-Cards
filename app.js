@@ -15,7 +15,7 @@ config(app);
 
 app.use('/', mainRoute);
 app.use('/registration', regRoute);
-app.use('/autentication', authRoute);
+app.use('/authentication', authRoute);
 
 app.listen(PORT, async () => {
   console.log(`Server started at ${PORT} port`);

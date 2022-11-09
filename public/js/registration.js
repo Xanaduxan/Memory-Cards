@@ -4,7 +4,7 @@ const confirmation = document.querySelector('#confirm');
 console.log(form, confirmation);
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const login = event.target.login.value;
+  const name = event.target.name.value;
   const password = event.target.password.value;
   const email = event.target.email.value;
  
@@ -15,7 +15,7 @@ form.addEventListener('submit', async (event) => {
       method: 'POST',
       headers: { 'Content-Type': 'Application/json' },
       body: JSON.stringify({
-        login,
+        name,
         password,
         email,
         passwordconf,

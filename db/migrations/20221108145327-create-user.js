@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.TEXT,
       },
       password: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
       },
       email: {
         type: Sequelize.TEXT,

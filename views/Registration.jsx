@@ -8,7 +8,7 @@ function Registration() {
       <form className="regForm" method="POST" action="/registration">
         <div className="mb-3">
           <label htmlFor="exampleInputLogin" className="form-label">Имя</label>
-          <input type="text" name="login" className="form-control" id="exampleInputLogin" />
+          <input type="text" name="name" className="form-control" id="exampleInputLogin" />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email</label>

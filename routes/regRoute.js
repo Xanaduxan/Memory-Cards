@@ -9,12 +9,12 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
   const {
-    login, password, email, passwordconf,
+    name, password, email, passwordconf,
   } = req.body;
 
   const userEmail = await User.findOne({
     where: {
-      login,
+      name,
     },
     raw: true,
   });
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     const newUser = await User.create({
-      login,
+      name,
       email,
       password: hashedPassword,
     });
