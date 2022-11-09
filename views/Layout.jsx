@@ -11,7 +11,8 @@ function Layout({ children, user }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Memory-Cards</title>
+        <script defer src='./js/profile.js'></script>
+        <title>Memory cards</title>
       </head>
       <body>
         <Header user={user} />

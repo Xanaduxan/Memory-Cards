@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Card.init({
     question: DataTypes.TEXT,
+    answer: DataTypes.TEXT,
     topicId: DataTypes.INTEGER,
   }, {
     sequelize,
