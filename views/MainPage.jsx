@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 function MainPage({ user }) {
   return (
-    <Layout>
+    <Layout user={user}>
 <div> Welcome</div>
 {user &&(<a href="/topics">К выбору тем</a>)}
 
