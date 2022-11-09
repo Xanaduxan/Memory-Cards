@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const Registration = require('../views/Registration.jsx');
-const { User } = require('../db/models');
+const { User, Card } = require('../db/models');
 
 router.get('/', (req, res) => {
   res.renderComponent(Registration);
@@ -37,6 +37,8 @@ router.post('/', async (req, res) => {
     });
 
     newUser.save();
+ 
+   
 
     req.session.userId = newUser.id;
     res.json({ registration: true });

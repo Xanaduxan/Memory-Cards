@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Card.belongsTo(Topic, {
         foreignKey: 'topicId',
       });
-      Card.belongsTo(Result, {
+      Card.hasMany(Result, {
         foreignKey: 'cardId',
       });
     }
