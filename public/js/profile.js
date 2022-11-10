@@ -1,8 +1,6 @@
-document.querySelector('.addForm').addEventListener('submit', async (e) => {
+document.querySelector('.addForm')?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  //   console.log(e.target.russian.value);
   const { russian, english, topic } = e.target;
-  //   console.log(russian.value, english.value, e.target.topics.value);
   const res = await fetch('/profile', {
     method: 'post',
     headers: { 'Content-type': 'application/json' },
@@ -10,7 +8,7 @@ document.querySelector('.addForm').addEventListener('submit', async (e) => {
   });
   const data = await res.json();
 
-  if (data.message === 'ok') {
-
+  if (typeof data.message === 'number') {
+    document.querySelector('.foodResult').innerText = Number(document.querySelector('.foodResult').innerText) + 1;
   }
 });
