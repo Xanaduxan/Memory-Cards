@@ -14,8 +14,6 @@ router.get('/:id', async (req, res) => {
   const { user } = res.locals;
   const { id } = req.params;
   try {
-    const cards = await Card.findAll({ raw: true, where: { topicId: id } });
-    // console.log(cards);
     const joinTable = await Card.findAll({
       raw: true,
       where: { topicId: id },
@@ -25,10 +23,7 @@ router.get('/:id', async (req, res) => {
         },
       ],
     });
-    
-    // console.log(joinTable);
     const endCards = joinTable.filter((el) => el.topicId !== id && user.id !== el.userId);
-    // console.log(endCards);
     res.renderComponent(CardPage, { user, endCards });
   } catch (e) {
     console.log(e.message);
