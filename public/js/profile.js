@@ -9,5 +9,8 @@ document.querySelector('.addForm').addEventListener('submit', async (e) => {
     body: JSON.stringify({ rus: russian.value, eng: english.value, topic: topic.value }),
   });
   const data = await res.json();
-  console.log(data);
+
+  if (data.message === 'ok') {
+
+  }
 });
