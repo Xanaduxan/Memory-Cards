@@ -4,11 +4,11 @@ const NewCard = require('./NewCard')
 const Header = require('./Header')
 const Progress = require('./Progress')
 
-const Profile = ({ title }) => {
+const Profile = ({ result, user, allCards }) => {
 	return (
-		<Layout title={title}>
+		<Layout user={user}>
 			<div>
-				<Progress />
+				<Progress result={result} allCards={allCards} />
 				<NewCard />
 			</div>
 		</Layout>
