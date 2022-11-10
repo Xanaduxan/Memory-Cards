@@ -25,6 +25,7 @@ router.get('/:id', async (req, res) => {
         },
       ],
     });
+    
     // console.log(joinTable);
     const endCards = joinTable.filter((el) => el.topicId !== id && user.id !== el.userId);
     // console.log(endCards);
