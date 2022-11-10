@@ -4,6 +4,7 @@ const Layout = require('./Layout');
 function CardPage({user, endCards}) {
   return (
     <Layout user={user}>
+      <div className='topic-list'>
       {endCards.map((endCard) => (
         <section className="topicList" key={endCard.id}>
           <div className="card-body">
@@ -16,6 +17,7 @@ function CardPage({user, endCards}) {
           </div>
         </section>
       ))}
+      </div>
     </Layout>
   );
 }

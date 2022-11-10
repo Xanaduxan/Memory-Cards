@@ -2,7 +2,7 @@ const React = require('react');
 
 function Header({ user }) {
   return (
-    <>
+    <header>
       {user ? (
         <div className="header-container">
           <ul className="navbar">
@@ -27,7 +27,7 @@ function Header({ user }) {
               <a className="nav-link" href="/registration">Регистрация</a>
             </li>
             <li className="navbar-item">
-              Flashcard
+              <div className="nav-div">Flashcard</div>
             </li>
             <li className="navbar-item">
               <a className="nav-link" href="/authentication">Войти</a>
@@ -37,7 +37,7 @@ function Header({ user }) {
         </div>
       )}
 
-    </>
+    </header>
   );
 }
 
