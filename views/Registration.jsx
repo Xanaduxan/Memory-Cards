@@ -5,7 +5,8 @@ const Layout = require('./Layout');
 function Registration() {
   return (
     <Layout>
-      <form className="regForm" method="POST" action="/registration">
+      <div className='container'>
+        <form className="regForm" method="POST" action="/registration">
         <div className="mb-3">
           <label htmlFor="exampleInputLogin" className="form-label">Имя</label>
           <input type="text" name="name" className="form-control" id="exampleInputLogin" />
@@ -27,6 +28,7 @@ function Registration() {
         <div id="confirm" />
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
+      </div>
       <script defer src="/js/registration.js" />
     </Layout>
   );
