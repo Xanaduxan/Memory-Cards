@@ -6,7 +6,6 @@ function CardPage({ user, endCards }) {
     <Layout user={user}>
       <section className="section">
       {endCards.map((endCard) => (
-        
         <section data-topicid={endCard.topicId} data-id={endCard.id} className="topicList" key={endCard.id}>
           <div className="card center">
             <div className="front">
