@@ -1,18 +1,30 @@
 .privatTable .progress {
 	font-size: 20px;
-	background-color: rgba(242, 116, 193, 0.283);
-	height: 137px;
-    width: 380px;
+	background-color: rgba(238, 163, 163, 0.726);
+	height: 460px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
 	justify-content: inherit;
     align-items: inherit;
-	padding: 10px;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+img {
+	margin-left: 15px;
+	margin-bottom: 20px;
+	border-radius: 30px;
+	margin-top: 20px;
+	width: 80%;
 }
 
 #food, #travel, #animals {
+	font-variant-caps: petite-caps;
+	color: brown;
+	font-size: 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -35,25 +47,39 @@
 }
 
 .privatTable {
+	
 	margin-top: 50px;
-	margin-left: 15%;
-	margin-right: 15%;
+	margin-left: 25%;
+	margin-right: 25%;
 	display: flex;
 	justify-content: space-between;
 }
 
 .addForm {
-	padding: 10px;
+	color: brown;
+	justify-content: initial;
+	padding: 30px;
+	padding-top: 60px;
 	border-radius: 20px;
-	background-color: rgba(242, 116, 193, 0.283);
+	background-color: rgba(238, 163, 163, 0.726);
 }
 
 .btn, .btn-primary {
+	justify-content: initial;
+	color: rgb(37, 12, 12);
 	background-color: rgb(169, 74, 93);
-	border: 2px solid rgb(193, 80, 97);
+	border: 2px solid rgba(185, 73, 90, 0.878);
 }
 
   #selectTopic{
-  border-radius: 15px;
-  background-color: #d830934f;
+	color: aliceblue;
+	border:  2px solid rgba(185, 73, 90, 0.878);;
+	border-radius: 15px;
+	background-color: #b7558e84;
 }
+
+/* .resultPic {
+	height: 600px;
+	width: 600px;
+	background-image: url('/image/photo1668160463.jpeg');
+} */

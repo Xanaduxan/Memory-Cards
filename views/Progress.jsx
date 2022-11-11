@@ -41,6 +41,9 @@ const Progress = ({ result, allCards }) => {
 					<span className="animalsResult">{animals}</span>
 				</div>
 			</div>
+			<div className='resultPic'>
+				<img src="/image/photo1668160463.jpeg" alt="" />
+			</div>
 		</div >
 	)
 }
