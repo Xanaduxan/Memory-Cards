@@ -1,7 +1,9 @@
 require('@babel/register');
+require('dotenv').config();
 const express = require('express');
 const config = require('./config/serverConfig');
 const { sequelize } = require('./db/models');
+
 
 const mainRoute = require('./routes/mainRoute');
 const regRoute = require('./routes/regRoute');
