@@ -23,10 +23,24 @@ router.get('/:id', async (req, res) => {
         },
       ],
     });
-    const endCards = joinTable.filter((el) => el.topicId !== id && user.id !== el.userId);
+    // console.log(joinTable);
+    const endCards = joinTable.filter((el) => user.id !== el.userId && !el['Results.result']);
     res.renderComponent(CardPage, { user, endCards });
   } catch (e) {
     console.log(e.message);
+  }
+});
+
+router.delete('/:topicId/:id', async (req, res) => {
+  try {
+    const { user } = res.locals;
+    const { topicId, id } = req.params;
+    const add = await Result.create({
+      userId: user.id, result: true, topicId, cardId: id,
+    });
+    res.json(add);
+  } catch (error) {
+    console.log(error.message);
   }
 });
 
