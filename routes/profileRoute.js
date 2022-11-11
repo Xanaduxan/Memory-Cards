@@ -19,7 +19,8 @@ router.post('/', async (req, res) => {
   const { rus, eng, topic } = req.body;
   try {
     const data = await Card.create({ answer: rus, question: eng, topicId: topic });
-    res.json({ message: data.topic });
+    console.log(data.topicId);
+    res.json({ message: data.topicId });
   } catch (error) {
     res.json({ message: error });
   }

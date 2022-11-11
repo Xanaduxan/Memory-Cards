@@ -13,8 +13,10 @@ function Layout({ children, user }) {
         <link rel="stylesheet" href='/css/cardstyle.css'/>
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/progressbar.css" />
         <script defer src='/js/profile.js'></script>
         <script defer src='/js/deleteCards.js'></script>
+
         <title>Memory cards</title>
       </head>
       <body>
