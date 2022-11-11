@@ -1,12 +1,12 @@
 body {
-  background: rgb(255, 163, 105);
+  background: rgb(245, 180, 157);
   font-size: 26px;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: rgb(231, 105, 42);
+  background-color: rgba(238, 163, 163, 0.758);
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -22,17 +22,18 @@ ul.navbar {
   padding: 0px;
   font-family: Arial, sans-serif;
   text-transform: uppercase;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   margin: 20px;
 }
 
 .navbar-item {
-
-  display: inline-flex;
-  border: solid 1px black;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 30px;
+  display: flex;
   padding: 20px;
-  background-color: rgba(158, 148, 11, 0.283);
+  background-color: rgba(242, 116, 193, 0.283);
 }
 
 a.nav-link {
@@ -47,6 +48,10 @@ a.nav-link {
   color: black;
 }
 
+.flash {
+  font-family: cursive;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -54,16 +59,16 @@ form {
 }
 
 .btn {
-  border: 2px solid rgb(116, 28, 4);
+  border: 2px solid rgba(110, 37, 48, 0.911);
 }
 
 .btn,
 .btn-primary {
-  background-color: brown;
+  background-color: rgb(169, 74, 93);
 }
 
 .btn-primary:hover {
-  background-color: rgb(166, 152, 152);
+  background-color: rgba(129, 47, 47, 0.399);
 }
 
 .promo {
@@ -74,11 +79,13 @@ form {
 }
 
 .promo-welcome {
+  width: 500px;
+  color: bisque;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
-
+  flex-direction: column;
+  min-height: 300px;
   font-size: 36px;
 
 }
@@ -87,17 +94,27 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
-  border: 1px solid black;
+  min-height: 150px;
+  border-radius: 100px;
+  border: 1px solid rgba(201, 181, 181, 0.366);
   font-size: 36px;
   width: 500px;
-  background-color: rgb(107, 69, 11);
+  background-color: rgba(119, 15, 48, 0.127);
 
 }
 
 .welcome a {
   color: rgb(239, 246, 246);
   text-decoration: none;
+}
+
+.form-authentification {
+  max-width: 70%;
+  margin: 20%;
+  margin-top: 30px;
+}
+.form-authentification .btn{
+  background-color: rgb(169, 74, 93);
 }
 
 .topic-list {
@@ -107,7 +124,7 @@ form {
   gap:20px;
 }
 
-.card-body {
+/* .card-body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +134,7 @@ form {
   width: 300px;
   background-color: rgb(107, 69, 11);
 
-}
+} */
 
 .card-body a {
   color: rgb(239, 246, 246);

@@ -1,22 +1,59 @@
 .privatTable .progress {
+	font-size: 20px;
+	background-color: rgba(242, 116, 193, 0.283);
 	height: 137px;
-    width: 300px;
+    width: 380px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-	text-align: start;
-	justify-content: center;
-    align-items: center;
+	justify-content: inherit;
+    align-items: inherit;
+	padding: 10px;
 }
 
 #food, #travel, #animals {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
 }
 
+.progressText {
+	width: 100px;
+}
+
+.progress-bar{
+	width: 200px;
+	background-color: none !important;
+}
+
+.num-container {
+	 /* flex-grow: 1; */
+	width: 50px; 
+	margin-left: 10px;
+}
+
 .privatTable {
+	margin-top: 50px;
+	margin-left: 15%;
+	margin-right: 15%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+}
+
+.addForm {
+	padding: 10px;
+	border-radius: 20px;
+	background-color: rgba(242, 116, 193, 0.283);
+}
+
+.btn, .btn-primary {
+	background-color: rgb(169, 74, 93);
+	border: 2px solid rgb(193, 80, 97);
+}
+
+  #selectTopic{
+  border-radius: 15px;
+  background-color: #d830934f;
 }
