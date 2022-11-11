@@ -146,6 +146,10 @@ form {
   text-decoration: none;
 }
 
+.card-body:hover{
+  color:darkolivegreen;
+}
+
 .card-body a:hover {
   color: rgb(121, 126, 126);
   text-decoration: none;

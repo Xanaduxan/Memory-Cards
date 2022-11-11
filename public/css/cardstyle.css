@@ -45,7 +45,7 @@
     backface-visibility: hidden;
     position: absolute;
     flex-wrap: wrap;
-    transition: transform 0.5s linear;
+    transition: transform 0.1s linear;
     border-radius: 30px;
 }
 
