@@ -10,26 +10,30 @@ const Progress = ({ result, allCards }) => {
 	const travelTotal = result.filter((card) => 2 === card.topicId).length
 	const animalsTotal = result.filter((card) => 3 === card.topicId).length
 	console.log(food, travel, animals);
+	const value = `value = "${foodTotal / 100 * food}"`
 
 	return (
 		<div className="progress" >
-			<div id='1'>
-				<span className=''>Food </span>
-				<span className=''>{foodTotal}</span>
-				<span className=''>/</span>
-				<span className='1'>{food}</span>
+			<div id="food">
+				<span className="">Food</span>
+				<progress className="progress-bar" max="100" {...value} />
+				<span>{foodTotal}</span>
+				<span>/</span>
+				<span className="foodResult">{food}</span>
 			</div>
-			<div id='2'>
-				<span className=''>Travel </span>
-				<span className=''>{travelTotal}</span>
-				<span className=''>/</span>
-				<span className='2'>{travel}</span>
+			<div id="travel">
+				<span className="">Travel</span>
+				<progress className="progress-bar" max="100" {...value} />
+				<span>{travelTotal}</span>
+				<span>/</span>
+				<span className="travelResult">{travel}</span>
 			</div>
-			<div id='2'>
-				<span className=''>Animals </span>
-				<span className=''>{animalsTotal}</span>
-				<span className=''>/</span>
-				<span className='3'>{animals}</span>
+			<div id="animals">
+				<span className="">Animals</span>
+				<progress className="progress-bar" max="100" {...value} />
+				<span>{animalsTotal}</span>
+				<span>/</span>
+				<span className="animalsResult">{animals}</span>
 			</div>
 		</div >
 	)

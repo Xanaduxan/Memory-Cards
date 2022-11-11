@@ -8,7 +8,13 @@ document.querySelector('.addForm')?.addEventListener('submit', async (e) => {
   });
   const data = await res.json();
 
-  if (typeof data.message === 'number') {
+  if (data.message === 1) {
     document.querySelector('.foodResult').innerText = Number(document.querySelector('.foodResult').innerText) + 1;
+  }
+  if (data.message === 2) {
+    document.querySelector('.travelResult').innerText = Number(document.querySelector('.travelResult').innerText) + 1;
+  }
+  if (data.message === 3) {
+    document.querySelector('.animalsResult').innerText = Number(document.querySelector('.animalsResult').innerText) + 1;
   }
 });

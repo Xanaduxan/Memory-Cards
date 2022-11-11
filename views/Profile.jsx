@@ -7,7 +7,7 @@ const Progress = require('./Progress')
 const Profile = ({ result, user, allCards }) => {
 	return (
 		<Layout user={user}>
-			<div>
+			<div className='privatTable'>
 				<Progress result={result} allCards={allCards} />
 				<NewCard />
 			</div>
