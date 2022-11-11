@@ -6,14 +6,12 @@
 
 /* body{
     background-color: #333;
-} */
+ } */
 
-/* .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
+.center {
+    height: 0 !important;
+    border: none !important;
+}
 
 .card {
     display: flex;
@@ -21,8 +19,12 @@
     justify-content: center;
     flex-wrap: wrap;
     cursor: pointer;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+}
+
+.section {
+    min-height: 400px;
 }
 
 .front {
@@ -30,22 +32,24 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #FA7575;
+    background: url("/image/front.jpg");
+    background-size: contain;
 }
 
 .front,
 .back {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     backface-visibility: hidden;
     position: absolute;
+    flex-wrap: wrap;
     transition: transform .6s linear;
 }
 
-.front img {
+/* .front img {
     height: 100%;
-}
+ } */
 
 .front {
     transform: perspective(600px) rotateY(0deg);
@@ -53,7 +57,8 @@
 
 .back {
     transform: perspective(600px) rotateY(180deg);
-    background-color: #A661DB;
+    background: url("/image/back.jpg");
+    background-size: contain;
 }
 
 .back-content {
@@ -61,15 +66,15 @@
     margin-top: 10px;
     text-align: center;
     color: #333333;
-    vertical-align: middle 
+    vertical-align: middle
 }
 
-.fas {
+/* .fas {
     display: block;
     margin: 20px 0;
     color: red;
     font-size: 30px;
-}
+ } */
 
 .card:hover>.front {
     transform: perspective(600px) rotateY(-180deg);
@@ -80,6 +85,7 @@
 }
 
 .section {
+    margin-top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,9 +94,34 @@
 }
 
 .button {
-    margin-top: 10px;
+    display: flex;
+    margin-top: 200px;
+    margin-left: 100px;
+    align-self: center;
 }
 
 .topicList {
-    margin-left: 30px;
+    margin-left: 50px;
+    height: 0;
 }
+
+#front {
+    width: 200px;
+    height: 200px;
+}
+
+#back {
+    width: 200px;
+    height: 200px;
+}
+
+/* .card-body {
+    display: flex;
+    position: absolute;
+    text-align:justify ;
+ }
+  
+ .text {
+    display: flex;
+   z-index: 3;
+ } */
