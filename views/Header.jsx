@@ -6,11 +6,11 @@ function Header({ user }) {
       {user ? (
         <div className="header-container">
           <ul className="navbar">
-          <li className="navbar-item">
+            <li className="navbar-item">
               <a className="nav-link" href="/profile">Личный кабинет</a>
             </li>
             <li className="navbar-item">
-              <a className="nav-link" href="/topics">Flashcards</a>
+              <a className="nav-link flash" href="/topics">MemoryCards</a>
             </li>
 
             <li className="navbar-item">
@@ -27,12 +27,12 @@ function Header({ user }) {
               <a className="nav-link" href="/registration">Регистрация</a>
             </li>
             <li className="navbar-item">
-              <div className="nav-div">Flashcard</div>
+              <div className="nav-div flash">MemoryCards</div>
             </li>
             <li className="navbar-item">
               <a className="nav-link" href="/authentication">Войти</a>
             </li>
-            
+
           </ul>
         </div>
       )}

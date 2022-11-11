@@ -15,25 +15,31 @@ const Progress = ({ result, allCards }) => {
 	return (
 		<div className="progress" >
 			<div id="food">
-				<span className="">Food</span>
+				<span className="progressText">Food</span>
 				<progress className="progress-bar" max="100" {...value} />
-				<span>{foodTotal}</span>
-				<span>/</span>
-				<span className="foodResult">{food}</span>
+				<div className='num-container'>
+					<span>{foodTotal}</span>
+					<span>/</span>
+					<span className="foodResult">{food}</span>
+				</div>
 			</div>
 			<div id="travel">
-				<span className="">Travel</span>
+				<span className="progressText">Travel</span>
 				<progress className="progress-bar" max="100" {...value} />
-				<span>{travelTotal}</span>
-				<span>/</span>
-				<span className="travelResult">{travel}</span>
+				<div className='num-container'>
+					<span>{travelTotal}</span>
+					<span>/</span>
+					<span className="travelResult">{travel}</span>
+				</div>
 			</div>
 			<div id="animals">
-				<span className="">Animals</span>
+				<span className="progressText">Animals</span>
 				<progress className="progress-bar" max="100" {...value} />
-				<span>{animalsTotal}</span>
-				<span>/</span>
-				<span className="animalsResult">{animals}</span>
+				<div className='num-container'>
+					<span>{animalsTotal}</span>
+					<span>/</span>
+					<span className="animalsResult">{animals}</span>
+				</div>
 			</div>
 		</div >
 	)

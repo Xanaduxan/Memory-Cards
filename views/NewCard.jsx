@@ -5,7 +5,7 @@ const NewCard = ({ title }) => {
 		<form className="addForm" method="POST" action="/profile">
 			<div className="mb-3">
 				<label htmlFor="exampleInputTopic" className="form-label">Тема</label>
-				<select name='topic'>
+				<select id="selectTopic" name='topic'>
 					<option value="1">Food</option>
 					<option value="2">Travel</option>
 					<option value="3">Animals</option>
