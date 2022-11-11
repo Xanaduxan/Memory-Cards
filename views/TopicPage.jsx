@@ -1,21 +1,22 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function TopicPage({user, topics}) {
+function TopicPage({ user, topics }) {
   return (
     <Layout user={user}>
-      {topics.map((topic) => (
-        <section className="topicList" key={topic.id}>
-          <div className="card-body">
-           
-            <a href={`/topics/${topic.id}`} className="card-text">
-              Topic:
-              {' '}
-              {topic.title}
-            </a>
-          </div>
-        </section>
-      ))}
+      <div className='topic-list'>
+        {topics.map((topic) => (
+          <section className="topic" key={topic.id}>
+            <div className="card-body">
+
+              <a href={`/topics/${topic.id}`} className="card-text">
+                {topic.title}
+              </a>
+            </div>
+          </section>
+        ))}
+      </div>
+
     </Layout>
   );
 }

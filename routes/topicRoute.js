@@ -14,19 +14,33 @@ router.get('/:id', async (req, res) => {
   const { user } = res.locals;
   const { id } = req.params;
   try {
-    const cards = await Card.findAll({ raw: true, where: { topicId: id } });
-    console.log(cards);
-    const joinTable = await Card.findAll({raw: true,
-      include: {
-        model: Result,
-        // where: { Cards.topicId: { Result.topicId } },
-      },
+    const joinTable = await Card.findAll({
+      raw: true,
+      where: { topicId: id },
+      include: [
+        {
+          model: Result,
+        },
+      ],
     });
-    const endCards = joinTable.filter((el) => el.topicId !== id && user.id !== el.userId);
-    console.log(endCards);
+    // console.log(joinTable);
+    const endCards = joinTable.filter((el) => user.id !== el.userId && !el['Results.result']);
     res.renderComponent(CardPage, { user, endCards });
   } catch (e) {
     console.log(e.message);
+  }
+});
+
+router.delete('/:topicId/:id', async (req, res) => {
+  try {
+    const { user } = res.locals;
+    const { topicId, id } = req.params;
+    const add = await Result.create({
+      userId: user.id, result: true, topicId, cardId: id,
+    });
+    res.json(add);
+  } catch (error) {
+    console.log(error.message);
   }
 });
 

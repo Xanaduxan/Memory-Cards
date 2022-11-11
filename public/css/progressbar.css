@@ -1,0 +1,85 @@
+.privatTable .progress {
+	font-size: 20px;
+	background-color: rgba(238, 163, 163, 0.726);
+	height: 460px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+	justify-content: inherit;
+    align-items: inherit;
+	padding: 20px;
+	border-radius: 30px;
+}
+
+img {
+	margin-left: 15px;
+	margin-bottom: 20px;
+	border-radius: 30px;
+	margin-top: 20px;
+	width: 80%;
+}
+
+#food, #travel, #animals {
+	font-variant-caps: petite-caps;
+	color: brown;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.progressText {
+	width: 100px;
+}
+
+.progress-bar{
+	width: 200px;
+	background-color: none !important;
+}
+
+.num-container {
+	 /* flex-grow: 1; */
+	width: 50px; 
+	margin-left: 10px;
+}
+
+.privatTable {
+	
+	margin-top: 50px;
+	margin-left: 25%;
+	margin-right: 25%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.addForm {
+	color: brown;
+	justify-content: initial;
+	padding: 30px;
+	padding-top: 60px;
+	border-radius: 20px;
+	background-color: rgba(238, 163, 163, 0.726);
+}
+
+.btn, .btn-primary {
+	justify-content: initial;
+	color: rgb(37, 12, 12);
+	background-color: rgb(169, 74, 93);
+	border: 2px solid rgba(185, 73, 90, 0.878);
+}
+
+  #selectTopic{
+	color: aliceblue;
+	border:  2px solid rgba(185, 73, 90, 0.878);;
+	border-radius: 15px;
+	background-color: #b7558e84;
+}
+
+/* .resultPic {
+	height: 600px;
+	width: 600px;
+	background-image: url('/image/photo1668160463.jpeg');
+} */
