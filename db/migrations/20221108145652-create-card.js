@@ -9,9 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       question: {
+        allowNull: false,
+        type: Sequelize.TEXT,
+      },
+      answer: {
+        allowNull: false,
         type: Sequelize.TEXT,
       },
       topicId: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references: {
           model: 'Topics',
