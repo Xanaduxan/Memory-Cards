@@ -2,12 +2,9 @@ const router = require('express').Router();
 const Profile = require('../views/Profile.jsx');
 const { Card, Result, Topic } = require('../db/models');
 
-// router.get('/', (req, res) => {
-//   res.renderComponent(Profile);
-// });
-
 router.get('/', async (req, res) => {
-  const result = await Result.findAll({ where: { userId: 1, result: true }, raw: true });
+  const user = req.session.userId;
+  const result = await Result.findAll({ where: { userId: user, result: true }, raw: true });
   const allCards = await Card.findAll();
   // console.log(result);
   res.renderComponent(Profile, {
