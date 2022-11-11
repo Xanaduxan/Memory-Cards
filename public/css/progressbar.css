@@ -1,0 +1,22 @@
+.privatTable .progress {
+	height: 137px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+	text-align: start;
+	justify-content: center;
+    align-items: center;
+}
+
+#food, #travel, #animals {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+.privatTable {
+	display: flex;
+	justify-content: space-evenly;
+}
