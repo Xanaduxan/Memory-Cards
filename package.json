@@ -4,7 +4,7 @@
   "description": "Привет! Моя идея приложения - это флеш карты для запоминания английских слов. Приложение должно давать возможность создавать новые карточки, тренироваться в их запоминании и отслеживать прогресс.",
   "main": "index.js",
   "scripts": {
-    "start": "sequelize db:migrate && node app.js",
+    "start": "sequelize db:migrate && npx sequelize db:seed:all && node app.js",
     "dev": "nodemon app.js --ext js,jsx,json --ignore sessions",
     "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
