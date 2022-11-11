@@ -25,6 +25,7 @@
 
 .section {
     min-height: 400px;
+    
 }
 
 .front {
@@ -45,6 +46,7 @@
     position: absolute;
     flex-wrap: wrap;
     transition: transform .6s linear;
+    border-radius: 30px;
 }
 
 /* .front img {
@@ -119,9 +121,8 @@
     display: flex;
     position: absolute;
     text-align:justify ;
- }
+ }*/
   
  .text {
-    display: flex;
-   z-index: 3;
- } */
+    margin-bottom: 200px;
+ }
